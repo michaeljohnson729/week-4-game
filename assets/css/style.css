@@ -1,0 +1,71 @@
+body {
+    background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/footer_lodyas.png);
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 3px;
+}
+h1 {
+    font-size: 36px;
+    color: white;
+    margin: 20px;
+}
+
+.instructions {
+    color: white;
+    margin: 20px;
+    line-height: 200%;
+}
+img {
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+}
+
+.gem1 {
+    background: white;
+}
+
+.random-number{
+    clear: both;
+    float: left;
+    height:80px;
+    width: 180px;
+    background: rgb(99, 184, 99);
+    padding-top: 40px;
+    margin: 10px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+.wins-losses {
+    float: left;
+    height: 90px;
+    width: 140px;
+    background: rgb(0, 136, 255);
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+
+}
+
+.gems {
+    clear: both;
+}
+.score {
+    margin: 10px;
+    height: 120px;
+    width: 180px;
+    background: rgb(1, 177, 177);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.total-score {
+    text-align: center;
+    font-size: 30px;
+}
