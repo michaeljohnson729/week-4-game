@@ -15,7 +15,7 @@ $(document).ready(function () {
     //display random number to player
     $(".random-number").text(randomNumber);
 
-    //pick gem1 value 1-10
+    //pick gem1 value 1-12
     var gemValue1 = Math.floor((Math.random() * 12) + 1);
     var gemValue2 = Math.floor((Math.random() * 12) + 1);
     var gemValue3 = Math.floor((Math.random() * 12) + 1);
@@ -25,14 +25,15 @@ $(document).ready(function () {
     var gemArray = [gemValue1, gemValue2, gemValue3, gemValue4];
     //click on first gem
     $(".button").on("click", function () {
-        
-            totalScore = totalScore + parseInt($(this).attr("data-gem"));
-            $(".total-score").text(totalScore);
-    
+
+        totalScore = totalScore + parseInt($(this).attr("data-gem"));
+        $(".total-score").text(totalScore);
+
         if (totalScore === randomNumber) {
             wins++;
             $(".wins").text(wins);
-            $(".message").text("You win!")
+            $(".message").text("You win!");
+            reset();
             // reset game
         }
         //below doesnt work
@@ -41,6 +42,7 @@ $(document).ready(function () {
             $(".losses").text(losses);
             $(".message").text("You lose!")
             // reset game
+            reset();
         };
     });
 
@@ -50,7 +52,20 @@ $(document).ready(function () {
         x++;
         var gem = ".gem" + x;
         $(gem).attr("data-gem", gemArray[i]);
-    }
+    };
+
+    function reset() {
+        randomNumber = Math.floor(Math.random() * (120 - 19 + 1) + 19);
+        console.log(randomNumber);
+        $(".random-number").text(randomNumber);
+        gemValue1 = Math.floor((Math.random() * 12) + 1);
+        gemValue2 = Math.floor((Math.random() * 12) + 1);
+        gemValue3 = Math.floor((Math.random() * 12) + 1);
+        gemValue4 = Math.floor((Math.random() * 12) + 1);
+        console.log(gemValue1, gemValue2, gemValue3, gemValue4);
+        totalScore = 0;
+        $(".total-score").text(totalScore);
+    };
 
 
     // if (totalScore === randomNumber) {
