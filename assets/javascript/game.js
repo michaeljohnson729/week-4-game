@@ -63,21 +63,18 @@ $(document).ready(function () {
         gemValue3 = Math.floor((Math.random() * 12) + 1);
         gemValue4 = Math.floor((Math.random() * 12) + 1);
         console.log(gemValue1, gemValue2, gemValue3, gemValue4);
+        gemArray = [gemValue1, gemValue2, gemValue3, gemValue4];
         totalScore = 0;
         $(".total-score").text(totalScore);
+        for (var i = 0; i < gemArray.length; i++) {
+            var x = i;
+            x++;
+            var gem = ".gem" + x;
+            $(gem).attr("data-gem", gemArray[i]);
+        };
     };
 
 
-    // if (totalScore === randomNumber) {
-    //     wins++;
-    //     $(".wins").text(wins);
-    //     $(".message").text("You win!")
-    // }
-    // //below doesnt work
-    // if (totalScore > randomNumber) {
-    //     losses++;
-    //     $(".losses").text(losses);
-    //     $(".message").text("You lose!")
-    // };
+   
 
 });
